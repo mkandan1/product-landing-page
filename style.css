@@ -1,0 +1,674 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+    :root{
+        --font: 'Product Sans';
+        --small: 600;
+        --bold: 800;
+        --gray: #423F3F;
+        --thick-gray: rgb(49, 49, 49);
+        --btnblue:#1967D2;
+    }
+
+    @font-face {
+        font-family: 'Product Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+      }
+      
+
+#header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0 0 15px 0.1px rgb(212, 211, 211);
+    position: fixed;
+}
+
+@media (max-width: 768px){
+    #header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+#logo{
+    width: 4%;
+    margin: 6px;
+}
+
+@media (max-width: 768px){
+    #logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+#logo > img {
+    width: 100%;
+}
+
+@media (max-width:768px){
+    #logo img{
+        width: 10%;
+    }
+
+}
+#nav{
+    align-self: center;
+}
+
+#nav-bar ul{
+    padding:1px;
+}
+
+
+#nav-bar li{
+    display: inline;
+    font-size: 20px;
+    margin: 7px;
+    padding: 7px;
+}
+
+@media (max-width: 768px){
+    #nav-bar li{
+        font-size: 15px;
+        font-weight: var(--bold);
+    }
+}
+
+#nav-bar a{
+    color: var(--gray);
+    font-family: var(--font);
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+#nav-bar a:hover{
+    color: var(--gray);
+}
+
+#welcome {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    text-align:center;
+    justify-content: center;
+}
+
+#welcome-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#slogan {
+    font-family: var(--font);
+    color: var(--gray);
+    letter-spacing: 1.5px;
+    margin-top: 8em;
+}
+
+@media (max-width: 768px){
+    #slogan{
+        margin-top: 8.5em;
+        line-height: 35px;
+        letter-spacing: 1px;
+    }
+}
+
+#slogan h1{
+    font-size: 35px;
+    margin: 2px;
+    animation-name: text-ani1;
+    animation-duration: 0.8s;
+}
+
+#slogan h2 {
+    margin:2px;
+    font-size: 35px;
+    animation-name: text-ani2;
+    animation-duration: 0.9s;
+}
+
+@keyframes text-ani1{
+    0%{
+        transform: translateY(10px);
+        opacity: 0.10;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes text-ani2{
+    0%{
+        transform: translateY(10px);
+        opacity: 0.10;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px){
+    #slogan h1{
+        font-size: 30px;
+        margin:2px;
+    }
+    #slogan h2{
+        font-size: 30px;
+        margin: 2px;
+    }
+}
+#btn {
+    margin-top: 1em;
+}
+
+#btn button{
+    padding: 10px 0;
+    background: transparent;
+    border: 2px solid var(--btnblue);
+    border-radius: 4px;
+    color: var(--btnblue);
+    font-family: var(--font);
+    letter-spacing: 1px;
+    font-size: 15px;
+    width: 24%;
+    font-weight: var(--bold);
+    cursor: pointer;
+    outline: none;
+    animation-name: btn-ani;
+    animation-duration: 1.2s;
+}
+
+#btn button:hover{
+    background: var(--btnblue);
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes btn-ani{
+    0%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    25%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    40%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    45%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 0.2;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px){
+    #btn button{
+        font-size: 13px;
+        width:27%;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 409px){
+    #btn button{
+        margin-top: 2rem;
+    }
+}
+
+
+#nest-mini-img {
+    width: 100%;
+    height:50vh;
+    background: url(https://www.androidpolice.com/wp-content/uploads/2019/10/Google-Nest-Mini_Charcoal-2.png);
+    background-size:120%;
+    background-repeat: no-repeat;
+    background-position: top -100px right -3em;
+    animation-name: assistant-ani;
+    animation-duration: 2s;
+}
+
+@keyframes assistant-ani{
+    0%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    20%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    30%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    35%{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    40%{
+        opacity: 0.20;
+        transform: translateX(180px);
+    }
+    50%{
+        opacity: 0.50;
+    }
+    60%{
+        opacity: 0.60;
+    }
+    70%{
+        opacity: 0.70;
+    }
+    80%{
+        opacity: 0.80;
+    }
+    90%{
+        opacity: 0.90;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+
+}
+
+@media (max-width: 768px){
+    #nest-mini-img{
+        background-size:100%;
+        background-position: top -40px right 0em;
+    }
+}
+
+#features-container{
+    width:100%;
+    height: 90vh;
+}
+
+#features {
+    display:flex;
+    height: 90vh;
+}
+@media(max-width: 998px){
+
+    #features{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+}
+
+#feature-title{
+    width: 40%;
+    align-self: center;
+}
+
+@media(max-width: 998px){
+    #feature-title{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+#feature-title h3{
+    font-family: var(--font);
+    font-size: 50px;
+    margin:4px;
+    animation-name: text-ani1;
+    animation-duration: 0.8s;
+}
+
+@media(max-width: 998px){
+    #feature-title h3{
+        font-size: 38px;
+    }
+}
+
+ #feature-title p{
+    font-family: var(--font);
+    margin-left: 7px;
+    font-size: 17px;
+    font-weight: var(--bold);
+    letter-spacing: 0.7px;
+    animation-name: text-ani2;
+    animation-duration: 0.8s;
+}
+
+@media(max-width: 998px){
+    #feature-title p{
+        margin-left: 0.6em;
+        font-size: 14px;
+    }
+}
+#video-h{
+    width: 60%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 998px){
+    #video-h{
+        width: 100%;
+    }
+}
+    
+#video-h iframe{
+    align-self: center;
+}
+
+@media(max-width: 998px){
+
+    #video-h iframe {
+        width: 90%;
+        margin-top: -100px;
+        height: 300px;
+    }
+}
+
+#pricing-container {
+    width: 100%;
+    height: 90vh;
+    display: block;
+}
+
+@media (max-width: 998px){
+    #pricing-container{
+    width:100%;
+    height: auto;
+    }
+}
+#price-title{
+    display: flex;
+    justify-content: center;
+    font-family: var(--font);
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+#pricing{
+    width:100%;
+    height: 90vh;
+}
+
+@media (max-width: 998px){
+    #pricing{
+    width:100%;
+    height: auto;
+    }
+}
+
+#pricing-container-d{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media(max-width: 998px){
+    #pricing-container-d{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        align-items: center;
+    }
+}
+#google-home-container{
+    width: 30%;
+    text-align: center;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 5px 1px #dadada;
+}
+
+@media(max-width: 998px){
+    #google-home-container{
+        width: 80%;
+        margin-bottom: 2em;
+    }
+}
+
+#google-nest-mini-container{
+    width: 30%;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 5px 1px #dadada;
+}
+@media(max-width: 998px){
+    #google-nest-mini-container{
+        width: 80%;
+        margin-bottom: 2em;
+    }
+}
+
+#price-d{
+    padding: 1em;
+}
+
+#google-home h1{
+    font-family: var(--font);
+    letter-spacing: 1.5px;
+    color: var(--thick-gray);
+    margin: 0px;
+}
+
+#google-home h2{
+    font-family: var(--font);
+    letter-spacing: 1px;
+    color: var(--thick-gray);
+    margin: 5px;
+}
+#google-home h3{
+    font-family: var(--font);
+    letter-spacing: 1px;
+    color: var(--thick-gray);
+}
+
+#google-home p{
+    font-family: var(--font);
+    letter-spacing: 1px;
+    color: var(--thick-gray);
+}
+
+#google-home img{
+    width:67%;
+}
+
+#google-nest-mini h1{
+    font-family: var(--font);
+    letter-spacing: 1.5px;
+    color: var(--thick-gray);
+    margin:0;
+}
+
+#google-nest-mini h2{
+    font-family: var(--font);
+    letter-spacing: 1px;
+    color: var(--thick-gray);
+    margin: 5px;
+}
+
+#google-nest-mini h3{
+    font-family: var(--font);
+    letter-spacing: 1px;
+    color: var(--gray);
+}
+
+#google-nest-mini p{
+    font-family: var(--font);
+    letter-spacing: 0.5px;
+    color: var(--gray);
+}
+
+#google-nest-mini img{
+    margin-top: 4.5em;
+    width: 72%;
+}
+
+#btn-buy button{
+    border: 1px solid var(--btnblue);
+    font-family: var(--font);
+    padding: 7px 0;
+    width: 25%;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    border-radius: 3px;
+    color:rgb(41, 62, 252);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 3em;
+}
+
+#btn-buy button:hover{
+    background:rgb(41, 62, 252);
+    color: white;
+}
+
+#contact-us {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+#form-h{
+    align-self: center;
+    width: 100%;
+}
+#form-h legend {
+    text-align: center;
+    font-family: var(--font);
+    font-weight: var(--bold);
+    color: var(--thick-gray);
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+#input{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+#email{
+    width: 40%;
+    margin-right: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: var(--font);
+    font-size: 18px; 
+    font-weight: 600;
+    color: var(--gray);
+    letter-spacing: 1px;
+    padding: 15px 0 15px 20px;   
+}
+[type=email]:focus{
+    border: 1px solid var(--gray);
+    box-shadow: 0px 0px 5px 0.1px var(--gray);
+}
+
+#submit{
+    width: 10%;
+    font-family: var(--font);
+    font-weight: var(--bold);
+    letter-spacing: 1px;
+    font-size: 17px;
+    color:rgb(7, 124, 170);
+    background: transparent;
+    border: 1px solid rgb(7, 124, 170);
+    border-radius: 3px;
+}
+
+#submit:hover{
+   color: white;
+   background: rgb(7, 124, 170);
+   cursor: pointer;
+}
+
+@media (max-width: 998px){
+    #form-h legend{
+        font-size: 35px;
+    }
+    #email{
+        width: 60%;
+        font-size: 13px;
+        padding: 10px;
+    }
+    #submit{
+        width: 15%;
+        font-size: 13px;
+        padding:10px;
+    }
+}
+footer{
+    width: 100%;
+    height:15rem;
+    background: #ebebeb;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 1px;
+}
+#copyright{
+    align-self: center;
+}
+#copyright p{
+    margin:0;
+    font-family: var(--font);
+}
+
+#social-links{
+    display: flex;
+    margin-top: 2rem;
+    justify-content:center;
+}
+
+#githup{
+    width:2.5%;
+    margin: 0 10px 0 10px;
+}
+
+#githup img{
+    max-width:100%;
+    display: block;
+    opacity: 0.40;
+}
+
+#githup img:hover{
+    opacity:1;
+}
+
+#gmail{
+    width:2.5%;
+    margin:0 10px 0 10px;
+}
+
+#gmail img{
+    width:100%;
+    opacity: 0.40;
+}
+
+#gmail img:hover{
+    opacity:1;
+}
